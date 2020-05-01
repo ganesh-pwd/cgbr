@@ -1,0 +1,224 @@
+/* Flexnav Base Styles */
+.MainMenuStructure {}
+.flexnav {
+	margin:0;
+	width: 30%;
+	height: 100vh;
+	background:#fff;
+	padding:0;
+	overflow-y:auto;
+	position:fixed;
+	top:0;
+	right:0;
+	z-index:9;
+	transition:all ease 0.7s;
+	transform:translateX(475px);
+	box-shadow:none;
+	
+}
+.flexnav.opacity {
+	/*opacity: 0;*/
+	/*display:none;*/
+}
+.flexnav.flexnav-show {
+	/*max-height: 2000px;*/
+	/*opacity: 1;*/
+	transition:all ease 0.7s;
+	transform:translateX(0);
+	box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+.flexnav.one-page {
+	position: fixed;
+	top: 50px;
+	right: 5%;
+	max-width: 200px;
+}
+.flexnav li {
+	font-size: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.flexnav li a {
+	position: relative;
+	display: block;
+	padding:10px 15px;
+	z-index: 2;
+	overflow: hidden;
+	color: #3e4058;
+	background: #fff;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+	text-decoration:none;
+	font:300 16px/23px 'Lato', sans-serif;
+	 
+}
+.flexnav li ul {
+	width: 100%;
+}
+.flexnav li ul li {
+	font-size: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.flexnav li ul.flexnav-show li {
+	overflow: visible;
+}
+.flexnav li ul li a {
+	display: block;
+	background: #fff;
+	padding:8px 15px 8px 45px;
+	font-size:13px;
+	letter-spacing:0;
+}
+.flexnav ul li ul li a {
+	background: #bfbfbc;
+}
+.flexnav ul li ul li ul li a {
+	background: #cbcbc9;
+}
+.flexnav .touch-button {
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	right: 0;
+	width: 44px;
+	height: 44px;
+	display: inline-block;
+	background: #acaca1;
+	background: rgba(0, 0, 0, 0.075);
+	text-align: center;
+}
+.flexnav .touch-button:hover {
+	cursor: pointer;
+}
+.flexnav .touch-button .navicon {
+	position: relative;
+	line-height:44px;
+	font-size: 12px;
+	color: #666;
+}
+/*.menu-button {
+	position: relative;
+	display: block;
+	padding: 1em;
+	background: #a6a6a2;
+	color: #222222;
+	cursor: pointer;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}*/
+.menu-button.one-page {
+	position: fixed;
+	top: 0;
+	right: 5%;
+	padding-right: 45px;
+}
+/*.menu-button .touch-button {
+	background: transparent;
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	text-align: center;
+}*/
+.menu-button .touch-button .navicon {
+	font-size: 16px;
+	position: relative;
+	top: 1em;
+	color: #666;
+	display:none;
+}
+
+.navbar-toggle .icon-bar {
+    width:25px;
+    height:3px;
+    background:#b3678a;
+	transition: all .35s ease;
+}
+/*.navbar-toggle.active { position:fixed; right:31%; transition:all ease 0.7s;}
+.navbar-toggle.active .icon-bar:nth-child(2) {
+	transform:translateY(6px) translateX(0) rotate(45deg);
+}
+.navbar-toggle.active .icon-bar:nth-child(3) {
+	display:none;
+}
+.navbar-toggle.active .icon-bar:nth-child(4) {
+	transform:translateY(-1px) translateX(0) rotate(-45deg);
+}*/
+
+.oldie body.one-page {
+	padding-top: 70px;
+}
+.oldie .flexnav {
+	overflow: visible;
+}
+.oldie .flexnav.one-page {
+	top: 0;
+	right: auto;
+	max-width: 1080px;
+}
+.oldie .flexnav li {
+	position: relative;
+	list-style: none;
+	float: left;
+	display: block;
+	background-color: #a6a6a2;
+	width: 20%;
+	min-height: 50px;
+	overflow: visible;
+}
+/*.oldie .flexnav li:hover > ul {
+	display: block;
+	width: 100%;
+	overflow: visible;
+}
+.oldie .flexnav li:hover > ul li {
+	width: 100%;
+	float: none;
+}*/
+.oldie .flexnav li a {
+	border-left: 1px solid #acaca1;
+	border-bottom: none;
+	overflow: visible;
+}
+.oldie .flexnav li > ul {
+	background: #acaca1;
+	position: absolute;
+	top: auto;
+	left: 0;
+	display: none;
+	z-index: 1;
+	overflow: visible;
+}
+.oldie .flexnav li ul li ul {
+	top: 0;
+}
+.oldie .flexnav li ul li a {
+	border-bottom: none;
+}
+.oldie .flexnav li ul.open {
+	display: block;
+	width: 100%;
+	overflow: visible;
+}
+.oldie .flexnav li ul.open li {
+	width: 100%;
+}
+.oldie .flexnav li ul.open ul.open {
+	margin-left: 100%;
+	top: 0;
+	display: block;
+	width: 100%;
+	overflow: visible;
+}
+/*.oldie .flexnav ul li:hover ul {
+	margin-left: 100%;
+	top: 0;
+}*/
+.oldie .menu-button {
+	display: none;
+}
+.oldie.ie7 .flexnav li {
+	width: 19.9%;
+}
